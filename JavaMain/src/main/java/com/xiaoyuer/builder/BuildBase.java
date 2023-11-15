@@ -78,6 +78,12 @@ public class BuildBase {
         headerInfoList.add("import " + Constants.PACKAGE_EXCEPTION + ".BusinessException");
         build(headerInfoList, "AGlobalExceptionHandlerController", Constants.PATH_CONTROLLER);
 
+        //生成StringTools枚举
+        headerInfoList.clear();
+        headerInfoList.add("package " + Constants.PACKAGE_UTILS);
+        headerInfoList.add("import " + Constants.PACKAGE_EXCEPTION + ".BusinessException");
+        build(headerInfoList, "StringTools", Constants.PATH_UTILS);
+
     }
 
     private static void build(List<String> headerInfoList, String fileName, String outPutPath) {
