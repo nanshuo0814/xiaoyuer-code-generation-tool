@@ -67,8 +67,8 @@ public class BuildTable {
                 tableInfo.setBeanParamName(beanName + Constants.SUFFIX_BEAN_QUERY);
                 readFieldInfo(tableInfo);
                 getKeyIndexInfo(tableInfo);
+                tableInfoList.add(tableInfo);
             }
-            tableInfoList.add(tableInfo);
         } catch (Exception e) {
             logger.error("Exception,获取表信息失败！", e);
         } finally {
