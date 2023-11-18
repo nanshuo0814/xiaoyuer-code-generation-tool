@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * @Description: 商品信息Service
  * @author: xiaoyuer
- * @date: 2023/11/15
+ * @date: 2023/11/19
  */
 @Service("productInfoService")
 public class ProductInfoServiceImpl implements ProductInfoService {
@@ -26,6 +26,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 根据条件查询列表
 	 */
+	@Override
 	public List<ProductInfo> findListByParam(ProductInfoQuery query) {
 		return this.productInfoMapper.selectList(query);
 	}
@@ -34,6 +35,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 根据条件查询数量
 	 */
+	@Override
 	public Integer findCountByParam(ProductInfoQuery query) {
 		return this.productInfoMapper.selectCount(query);
 	}
@@ -41,6 +43,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 分页查询
 	 */
+	@Override
 	public PaginationResultVO<ProductInfo> findListByPage(ProductInfoQuery query) {
 		Integer count = this.findCountByParam(query);
 		Integer pageSize = query.getPageSize() == null ? PageSize.SIZE15.getSize() : query.getPageSize();
@@ -54,6 +57,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 新增
 	 */
+	@Override
 	public Integer add(ProductInfo bean) {
 		return this.productInfoMapper.insert(bean);
 	}
@@ -61,6 +65,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 批量新增
 	 */
+	@Override
 	public Integer addBatch(List<ProductInfo> listBean) {
 		if (listBean == null || listBean.isEmpty()) {
 			return 0;
@@ -71,6 +76,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 批量新增或修改
 	 */
+	@Override
 	public Integer addOrUpdateBatch(List<ProductInfo> listBean) {
 		if (listBean == null || listBean.isEmpty()) {
 			return 0;
@@ -81,6 +87,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 根据Id查询
 	 */
+	@Override
 	public ProductInfo getProductInfoById(Integer id) {
 		return this.productInfoMapper.selectById(id);
 	}
@@ -88,6 +95,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 根据Id更新
 	 */
+	@Override
 	public Integer updateProductInfoById(ProductInfo bean, Integer id) {
 		return this.productInfoMapper.updateById(bean,id);
 	}
@@ -95,6 +103,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 根据Id删除
 	 */
+	@Override
 	public Integer deleteProductInfoById(Integer id) {
 		return this.productInfoMapper.deleteById(id);
 	}
@@ -102,6 +111,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 根据Code查询
 	 */
+	@Override
 	public ProductInfo getProductInfoByCode(String code) {
 		return this.productInfoMapper.selectByCode(code);
 	}
@@ -109,6 +119,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 根据Code更新
 	 */
+	@Override
 	public Integer updateProductInfoByCode(ProductInfo bean, String code) {
 		return this.productInfoMapper.updateByCode(bean,code);
 	}
@@ -116,6 +127,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 根据Code删除
 	 */
+	@Override
 	public Integer deleteProductInfoByCode(String code) {
 		return this.productInfoMapper.deleteByCode(code);
 	}
@@ -123,6 +135,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 根据SkuTypeAndColorType查询
 	 */
+	@Override
 	public ProductInfo getProductInfoBySkuTypeAndColorType(Integer skuType, Integer colorType) {
 		return this.productInfoMapper.selectBySkuTypeAndColorType(skuType, colorType);
 	}
@@ -130,6 +143,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 根据SkuTypeAndColorType更新
 	 */
+	@Override
 	public Integer updateProductInfoBySkuTypeAndColorType(ProductInfo bean, Integer skuType, Integer colorType) {
 		return this.productInfoMapper.updateBySkuTypeAndColorType(bean,skuType, colorType);
 	}
@@ -137,6 +151,7 @@ public class ProductInfoServiceImpl implements ProductInfoService {
 	/**
 	 * 根据SkuTypeAndColorType删除
 	 */
+	@Override
 	public Integer deleteProductInfoBySkuTypeAndColorType(Integer skuType, Integer colorType) {
 		return this.productInfoMapper.deleteBySkuTypeAndColorType(skuType, colorType);
 	}

@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @Description: 商品信息Service
  * @author: xiaoyuer
- * @date: 2023/11/15
+ * @date: 2023/11/19
  */
 public interface ProductInfoService {
 

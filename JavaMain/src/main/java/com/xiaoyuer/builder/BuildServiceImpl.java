@@ -74,6 +74,8 @@ public class BuildServiceImpl {
             bw.newLine();
 
             BuildComment.createFieldComment(bw, "根据条件查询列表");
+            bw.write("\t@Override");
+            bw.newLine();
             bw.write("\tpublic List<" + tableInfo.getBeanName() + "> findListByParam(" + tableInfo.getBeanParamName() + " query) {");
             bw.newLine();
             bw.write("\t\treturn this."+mapperBeanName+".selectList(query);");
@@ -84,6 +86,8 @@ public class BuildServiceImpl {
             bw.newLine();
 
             BuildComment.createFieldComment(bw, "根据条件查询数量");
+            bw.write("\t@Override");
+            bw.newLine();
             bw.write("\tpublic Integer findCountByParam(" + tableInfo.getBeanParamName() + " query) {");
             bw.newLine();
             bw.write("\t\treturn this."+mapperBeanName+".selectCount(query);");
@@ -93,6 +97,8 @@ public class BuildServiceImpl {
             bw.newLine();
 
             BuildComment.createFieldComment(bw, "分页查询");
+            bw.write("\t@Override");
+            bw.newLine();
             bw.write("\tpublic PaginationResultVO<" + tableInfo.getBeanName() + "> findListByPage(" + tableInfo.getBeanParamName() + " query) {");
             bw.newLine();
             bw.write("\t\tInteger count = this.findCountByParam(query);");
@@ -114,6 +120,8 @@ public class BuildServiceImpl {
             bw.newLine();
 
             BuildComment.createFieldComment(bw, "新增");
+            bw.write("\t@Override");
+            bw.newLine();
             bw.write("\tpublic Integer add(" + tableInfo.getBeanName() + " bean) {");
             bw.newLine();
             bw.write("\t\treturn this." + mapperBeanName + ".insert(bean);");
@@ -123,6 +131,8 @@ public class BuildServiceImpl {
             bw.newLine();
 
             BuildComment.createFieldComment(bw, "批量新增");
+            bw.write("\t@Override");
+            bw.newLine();
             bw.write("\tpublic Integer addBatch(List<" + tableInfo.getBeanName() + "> listBean) {");
             bw.newLine();
             bw.write("\t\tif (listBean == null || listBean.isEmpty()) {");
@@ -138,6 +148,8 @@ public class BuildServiceImpl {
             bw.newLine();
 
             BuildComment.createFieldComment(bw, "批量新增或修改");
+            bw.write("\t@Override");
+            bw.newLine();
             bw.write("\tpublic Integer addOrUpdateBatch(List<" + tableInfo.getBeanName() + "> listBean) {");
             bw.newLine();
             bw.write("\t\tif (listBean == null || listBean.isEmpty()) {");
@@ -172,6 +184,8 @@ public class BuildServiceImpl {
                     }
                 }
                 BuildComment.createFieldComment(bw, "根据" + methodName + "查询");
+                bw.write("\t@Override");
+                bw.newLine();
                 bw.write("\tpublic " + tableInfo.getBeanName() + " get" + tableInfo.getBeanName() + "By" + methodName + "(" + methodParam + ") {");
                 bw.newLine();
                 bw.write("\t\treturn this." + mapperBeanName + ".selectBy" + methodName + "(" + paramsBuilder + ");");
@@ -181,6 +195,8 @@ public class BuildServiceImpl {
                 bw.newLine();
 
                 BuildComment.createFieldComment(bw, "根据" + methodName + "更新");
+                bw.write("\t@Override");
+                bw.newLine();
                 bw.write("\tpublic Integer update" + tableInfo.getBeanName() + "By" + methodName + "(" + tableInfo.getBeanName() + " bean, " + methodParam + ") {");
                 bw.newLine();
                 bw.write("\t\treturn this." + mapperBeanName + ".updateBy" + methodName + "(bean," + paramsBuilder + ");");
@@ -190,6 +206,8 @@ public class BuildServiceImpl {
                 bw.newLine();
 
                 BuildComment.createFieldComment(bw, "根据" + methodName + "删除");
+                bw.write("\t@Override");
+                bw.newLine();
                 bw.write("\tpublic Integer delete" + tableInfo.getBeanName() + "By" + methodName + "(" + methodParam + ") {");
                 bw.newLine();
                 bw.write("\t\treturn this." + mapperBeanName + ".deleteBy" + methodName + "(" + paramsBuilder + ");");

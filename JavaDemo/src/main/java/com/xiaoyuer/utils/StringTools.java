@@ -50,7 +50,7 @@ public class StringTools {
      * @param str str
      * @return boolean
      */
-    private static boolean isEmpty(String str) {
+    public static boolean isEmpty(String str) {
         if (null == str || str.isEmpty() || "null".equals(str) || "\u0000".equals(str)) {
             return true;
         } else return str.trim().isEmpty();
@@ -62,7 +62,7 @@ public class StringTools {
      * @param field
      * @return {@code String}
      */
-    private static String upperCaseFirstLetter(String field) {
+    public static String upperCaseFirstLetter(String field) {
         if (isEmpty(field)) {
             return field;
         }
