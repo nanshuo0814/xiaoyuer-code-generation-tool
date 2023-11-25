@@ -1,10 +1,10 @@
-package com.xiaoyuer.mapper;
+package com.xiaoyuer.mappers;
 
 import org.apache.ibatis.annotations.Param;
 /**
  * @Description: 商品信息Mapper
- * @author: xiaoyuer
- * @date: 2023/11/19
+ * @author: 小鱼儿
+ * @date: 2023/11/25
  */
 public interface ProductInfoMapper<T, P> extends BaseMapper {
 

@@ -1,4 +1,4 @@
-package com.xiaoyuer.mapper;
+package com.xiaoyuer.mappers;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

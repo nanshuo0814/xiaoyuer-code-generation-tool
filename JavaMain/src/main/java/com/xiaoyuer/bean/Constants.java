@@ -76,7 +76,6 @@ public class Constants {
         PACKAGE_CONTROLLER = PACKAGE_BASE + "." + PropertiesUtils.getString("package.controller");
 
 
-
         PATH_BASE = PropertiesUtils.getString("path.base");
         PATH_BASE = PATH_BASE + PATH_JAVA;
         PATH_PO = PATH_BASE + "/" + PACKAGE_PO.replace(".", "/");
@@ -90,7 +89,10 @@ public class Constants {
         PATH_VO = PATH_BASE + "/" + PACKAGE_VO.replace(".", "/");
         PATH_CONTROLLER = PATH_BASE + "/" + PACKAGE_CONTROLLER.replace(".", "/");
 
-        PATH_MAPPERS_XMLS = PropertiesUtils.getString("path.base") + PATH_RESOURCES + "/" + PropertiesUtils.getString("package.mapper");
+        String[] values = PropertiesUtils.getString("package.base").split("\\.");
+        PATH_MAPPERS_XMLS = PropertiesUtils.getString("path.base") + PATH_RESOURCES + "/"
+                + PropertiesUtils.getString("package.mapper")
+                + "/" + values[1];
 
         AUTHOR_COMMENT = PropertiesUtils.getString("author.comment");
     }

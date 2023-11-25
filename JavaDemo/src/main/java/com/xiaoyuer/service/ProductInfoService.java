@@ -11,8 +11,8 @@ import com.xiaoyuer.entity.query.ProductInfoQuery;
 import java.util.List;
 /**
  * @Description: 商品信息Service
- * @author: xiaoyuer
- * @date: 2023/11/19
+ * @author: 小鱼儿
+ * @date: 2023/11/25
  */
 public interface ProductInfoService {
 

@@ -5,7 +5,7 @@ import com.xiaoyuer.entity.query.ProductInfoQuery;
 import com.xiaoyuer.entity.query.SimplePage;
 import com.xiaoyuer.entity.vo.PaginationResultVO;
 import com.xiaoyuer.enums.PageSize;
-import com.xiaoyuer.mapper.ProductInfoMapper;
+import com.xiaoyuer.mappers.ProductInfoMapper;
 import com.xiaoyuer.service.ProductInfoService;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +14,8 @@ import java.util.List;
 
 /**
  * @Description: 商品信息Service
- * @author: xiaoyuer
- * @date: 2023/11/19
+ * @author: 小鱼儿
+ * @date: 2023/11/25
  */
 @Service("productInfoService")
 public class ProductInfoServiceImpl implements ProductInfoService {
