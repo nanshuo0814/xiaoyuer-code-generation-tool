@@ -84,6 +84,11 @@ public class BuildBase {
         headerInfoList.add("import " + Constants.PACKAGE_EXCEPTION + ".BusinessException");
         build(headerInfoList, "StringTools", Constants.PATH_UTILS);
 
+        //生成CreateImageCode(图片验证码工具类)
+        headerInfoList.clear();
+        headerInfoList.add("package " + Constants.PACKAGE_UTILS);
+        build(headerInfoList, "CreateImageCode", Constants.PATH_UTILS);
+
     }
 
     private static void build(List<String> headerInfoList, String fileName, String outPutPath) {

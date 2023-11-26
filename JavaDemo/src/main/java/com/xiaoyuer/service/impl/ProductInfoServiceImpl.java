@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * @Description: 商品信息Service
  * @author: 小鱼儿
- * @date: 2023/11/25
+ * @date: 2023/11/26
  */
 @Service("productInfoService")
 public class ProductInfoServiceImpl implements ProductInfoService {

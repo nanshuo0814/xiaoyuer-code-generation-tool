@@ -2,6 +2,7 @@ package com.xiaoyuer;
 
 import com.xiaoyuer.bean.TableInfo;
 import com.xiaoyuer.builder.*;
+import com.xiaoyuer.utils.PropertiesUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +23,7 @@ public class JavaMainApplication {
             BuildServiceImpl.execute(tableInfo);
             BuildController.execute(tableInfo);
         }
-        logger.info("生成代码完成,end...");
+        logger.info("生成代码成功,end...");
+        logger.info("代码在 -> " + PropertiesUtils.getString("path.base"));
     }
 }
