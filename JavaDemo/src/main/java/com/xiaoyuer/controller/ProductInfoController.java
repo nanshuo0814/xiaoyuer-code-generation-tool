@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * @Description: 商品信息Controller
  * @author: 小鱼儿
- * @date: 2023/11/26
+ * @date: 2023/12/02
  */
 @RestController
 @RequestMapping("/productInfo")

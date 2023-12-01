@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * @Description: 商品信息查询对象
  * @author: 小鱼儿
- * @date: 2023/11/26
+ * @date: 2023/12/02
  */
 public class ProductInfoQuery extends BaseQuery {
 	/**

@@ -1,6 +1,6 @@
 package com.xiaoyuer.exception;
 import com.xiaoyuer.enums.ResponseCodeEnum;
-public class BusinessException extends Exception {
+public class BusinessException extends RuntimeException {
 
     private ResponseCodeEnum codeEnum;
 

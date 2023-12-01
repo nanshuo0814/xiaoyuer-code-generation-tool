@@ -14,7 +14,7 @@ import java.util.Date;
 /**
  * @Description: 商品信息
  * @author: 小鱼儿
- * @date: 2023/11/26
+ * @date: 2023/12/02
  */
 public class ProductInfo implements Serializable{
 
