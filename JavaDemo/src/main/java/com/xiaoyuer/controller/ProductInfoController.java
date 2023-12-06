@@ -35,7 +35,7 @@ public class ProductInfoController extends ABaseController {
 	 * 新增
 	 */
 	@RequestMapping("add")
-	public ResponseVO ResponseVO(@RequestBody ProductInfo bean) {
+	public ResponseVO add(@RequestBody ProductInfo bean) {
 		this.productInfoService.add(bean);
 		return getSuccessResponseVO(null);
 	}

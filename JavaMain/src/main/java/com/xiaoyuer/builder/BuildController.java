@@ -86,7 +86,7 @@ public class BuildController {
             BuildComment.createFieldComment(bw, "新增");
             bw.write("\t@RequestMapping(\"add\")");
             bw.newLine();
-            bw.write("\tpublic ResponseVO ResponseVO(@RequestBody " + tableInfo.getBeanName() + " bean) {");
+            bw.write("\tpublic ResponseVO add(@RequestBody " + tableInfo.getBeanName() + " bean) {");
             bw.newLine();
             bw.write("\t\tthis." + serviceBeanName + ".add(bean);");
             bw.newLine();
