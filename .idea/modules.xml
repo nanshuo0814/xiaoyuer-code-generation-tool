@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaDemo/JavaDemo.iml" filepath="$PROJECT_DIR$/JavaDemo/JavaDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/xiaoyuer-code-generation-tool.iml" filepath="$PROJECT_DIR$/.idea/xiaoyuer-code-generation-tool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/code-generation-tool.iml" filepath="$PROJECT_DIR$/.idea/code-generation-tool.iml" />
     </modules>
   </component>
 </project>
